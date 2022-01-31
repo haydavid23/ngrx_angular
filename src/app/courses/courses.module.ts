@@ -30,6 +30,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { CoursesEffects } from './courses.effects';
 import { StoreModule } from '@ngrx/store';
 import { coursesReducer } from './reducers/courses.reducer';
+import { coursesReducerMap } from './reducers/coursesIndex.reducer';
 
 
 export const coursesRoutes: Routes = [
