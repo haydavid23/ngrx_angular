@@ -14,8 +14,8 @@ export class AuthGuard implements CanActivate {
     constructor(
         private store: Store<AppState>,
         private router: Router) {
-
     }
+
 
     canActivate(
         route: ActivatedRouteSnapshot,
@@ -26,6 +26,7 @@ export class AuthGuard implements CanActivate {
                 select(isLoggedIn),
                 tap(loggedIn => {
                     if (!loggedIn) {
+
                         this.router.navigateByUrl('/login');
                     }
                 })
