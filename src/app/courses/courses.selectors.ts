@@ -24,3 +24,9 @@ export const selectPromoTotal = createSelector(
     selectAllCourses,
     (courses:Course[])=>{return courses.filter((course:Course)=>{return course.promo}).length}
 )
+
+
+export const areCoursesLoaded = createSelector(
+    selectCoursesState,
+    (state)=>{return state.allCoursesLoaded}
+)
